@@ -4,7 +4,7 @@ metadata:
   name: nginx
   namespace: argo-demo
 spec:
-  type: LoadBalancer
+  type: NodePort       # using local kind kubernetes. However, originally it was set to LoadBalancer, for AWS EKS
   selector:
     app.kubernetes.io/name: nginx
   ports:
